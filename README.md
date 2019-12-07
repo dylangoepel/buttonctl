@@ -1,7 +1,7 @@
 # ButtonCtl
-ButtonCTL im oberen Stockwerk des Chaospott zur vereinfachenden Steuerung der via SSH kontrollierbaren Türen mithilfe
+ButtonCTL wird im oberen Stockwerk des Chaospott zur vereinfachenden Steuerung der via SSH kontrollierbaren Türen mithilfe
 von physischen Buttons genutzt. Er ersetzt ein gleichnamiges älteres System.
-In seiner momentanen Version ist es nicht mit der zweiten Button-Installation neben der Kellertür
+In seiner momentanen Version ist er nicht mit der zweiten Button-Installation neben der Kellertür
 kompatibel, und kann dort somit nicht eingesetzt werden.
 
 ## Installation
