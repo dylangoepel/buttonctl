@@ -10,6 +10,11 @@ Zur Installation der im nächsten Abschnitt besprochenen Abhängigkeiten öffnen
 An diesem Punkt ist es ratsam das ihr System mit `sudo apt update && sudo apt upgrade`
 zu aktualieren. Nun nutzen sie `sudo apt install python3-rpi-gpio` zur Installation der Python-RPi Library und
 `sudo pip3 install adafruit-circuitpython-neopixel` zur Installation der ebenfalls notwendigen Neopixel-Library.
+
+Des Weiteren wird ein SSH-Client mit einem auf dem Türsystem registrierten Schlüssel benötigt. Den SSH-Client
+installieren sie auf einem Raspbian System mit `sudo apt install openssh`. Für weiterer Informationen über den
+benötigten Schlüssel sehen sie [hier](https://dokuwiki.chaospott.de/infrastruktur:zugang:start).
+
 ### Hardware
 Zum Ausführen von ButtonCtl ist die korrekte Verkabelung aller Komponenten notwendig. Um
 die Verkabelung in der aktuellen Installation des Systems im Club zu verändern, öffnen sie
@@ -20,6 +25,16 @@ Um den Raspberry Pi zu erreichen, müssen sie nun die dort verbauten Schrauben l
 
 Das Programm kommuniziert mit dem LED-Strip über die Pins 7 (BCM 4) und 12 (BCM 18). Die Buttons sind den
 Pins 23 (Aerie), 24 (Center), 22 (Keller) zugeordnet.
+
+### Ausführen
+Zum Ausführen klonen sie zuerst dieses Git-Repository.
+```bash
+git clone https://github.com/dylangoepel/buttonctl.git
+cd buttonctl
+```
+Nun können sie entweder `button.py` direkt mit `python3 button.py` ausführen oder einen Systemd-Service erstellen, der
+daraufhin automatisch beim Bootvorgang gestartet werden kann. Zum Erstellen des Services nutzen sie `bash service.sh`,
+und zur Aktivierung des automatischen Starts `systemctl enable buttond`.
 
 ## Abhängigkeiten
 ### Libraries
