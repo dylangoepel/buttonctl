@@ -135,7 +135,11 @@ class APILoader:
 
     def run(self):
         while True:
-            self.loadData()
+            try:
+	        self.loadData()
+	    except Exception as e:
+                print("Unable to load API data:", e)
+		
             time.sleep(self.delay)
 
     def loadData(self):
