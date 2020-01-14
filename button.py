@@ -162,14 +162,14 @@ gpio.setup(4, gpio.IN, pull_up_down=gpio.PUD_UP)
 strip = NeoPixel(D18, 36, brightness=0.5,
                           pixel_order=GRB, auto_write=False)
 
-# Create subhandles for each button handles
+# Create subhandles for each button
 leds = {
         "cellar": ButtonStrip(strip, list(range(1, 12))),
         "center": ButtonStrip(strip, list(range(12, 24))),
         "aerie": ButtonStrip(strip, list(range(24, 36))),
 }
 
-# Create button press sensor
+# Create button press sensor for input pins
 buttons = {
         22: "cellar",
         23: "aerie",
@@ -222,6 +222,6 @@ while True:
             action = str(press)
             
             if action == "center":
-                target=doors[selection].open()
+                doors[selection].open()
             elif action != selection:
                 doors[selection].close()
