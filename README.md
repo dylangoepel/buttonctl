@@ -7,7 +7,7 @@ kompatibel, und kann dort somit nicht eingesetzt werden.
 ## Installation
 ### Software
 Zur Installation der im nächsten Abschnitt besprochenen Abhängigkeiten öffnen sie zunächst eine Shell.
-An diesem Punkt ist es ratsam das ihr System mit `sudo apt update && sudo apt upgrade`
+An diesem Punkt ist es ratsam das ihr (Raspbian-)System mit `sudo apt update && sudo apt upgrade`
 zu aktualieren. Nun nutzen sie `sudo apt install python3-rpi-gpio` zur Installation der Python-RPi Library und
 `sudo pip3 install adafruit-circuitpython-neopixel` zur Installation der ebenfalls notwendigen Neopixel-Library.
 
